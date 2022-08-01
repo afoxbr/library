@@ -39,8 +39,19 @@ function displayLibrary() {
     };
 };
 
-const newBook = document.getElementById("newBook");
+function openForm() {
+    document.getElementById("theForm").style.display = "block";
+};
 
-newBook.addEventListener("click", () => {
-    
+const formSubmit = document.getElementById("formSubmit")
+
+formSubmit.addEventListener("click", () => {
+    document.getElementById("theForm").style.display = "none";
+    let submittedBook = new Book()
+    submittedBook.title = document.getElementById("titleInput").value;
+    submittedBook.author = document.getElementById("authorInput").value;
+    submittedBook.pageNumber = document.getElementById("pageInput").value;
+    submittedBook.haveRead = document.getElementById("readInput").value;
+    myLibrary.push(submittedBook);
+    displayLibrary();
 })

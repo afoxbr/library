@@ -37,4 +37,10 @@ function displayLibrary() {
             card.appendChild(cardRead)
         };
     };
-}
+};
+
+const newBook = document.getElementById("newBook");
+
+newBook.addEventListener("click", () => {
+    
+})

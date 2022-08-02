@@ -1,17 +1,13 @@
-@font-face {
-    font-family: 'montserrat_alternatesblack';
-    src: url('montserratalternates-black-webfont.woff2') format('woff2'),
-         url('montserratalternates-black-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body {
     background-color: #B6D0E2;
-    font-family: 'montserrat_alternatesblack';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#pageTitle {
+    
 }
 
 #theForm {
@@ -20,7 +16,7 @@ body {
     width: fit-content;
     border: 1px solid black;
     border-radius: 8px;
-    padding: 8px;
+    padding: 16px;
     background-color: white;
     box-shadow: 2px 4px black;
 }
@@ -33,14 +29,15 @@ body {
 #newBook {
     width: fit-content;
     padding: 6px;
-    background-color: peachpuff;
+    background-color: antiquewhite;
     border-radius: 6px;
+    margin: 4px;
 }
 
 #formSubmit {
     width: fit-content;
     padding: 6px;
-    background-color: peachpuff;
+    background-color: antiquewhite;
     border-radius: 6px;
     margin-top: 12px;
 }
@@ -55,8 +52,9 @@ body {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
+    border-left: 4px solid darkblue;
     border-radius: 16px;
-    box-shadow: 2px 4px black;
+    box-shadow: 2px 4px gray;
     background-color: white;
     padding: 12px;
     margin: 24px;
@@ -65,7 +63,7 @@ body {
 .card button {
     width: fit-content;
     padding: 6px;
-    background-color: peachpuff;
+    background-color: antiquewhite;
     border-radius: 6px;
     margin-top: 6px;
 }

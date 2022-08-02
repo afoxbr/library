@@ -58,7 +58,7 @@ function displayLibrary() {
 };
 
 function openForm() {
-    document.getElementById("theForm").style.display = "block";
+    document.getElementById("theForm").style.display = "flex";
 };
 
 const formSubmit = document.getElementById("formSubmit")

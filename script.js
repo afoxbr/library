@@ -14,6 +14,7 @@ function addToLibrary(book) {
 const cardDisplay = document.getElementById("cardDisplay");
 
 function displayLibrary() {
+    cardDisplay.replaceChildren();
     for (let i = 0; i < myLibrary.length; i++) {
         card = document.createElement("div");
         card.setAttribute("class", "card");

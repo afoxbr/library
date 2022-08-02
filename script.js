@@ -41,11 +41,12 @@ function displayLibrary() {
         readButton.innerHTML = "Change read status";
         card.appendChild(readButton);
         readButton.addEventListener("click", () => {
-            if (cardRead.innerHTML == "Read") {
-                cardRead.innerHTML = "Not Read";
-            } else if (cardRead.innerHTML == "Not Read") {
-                cardRead.innerHTML = "Read";
+            if (myLibrary[i].haveRead == true) {
+                myLibrary[i].haveRead = false;
+            } else if (myLibrary[i].haveRead == false) {
+                myLibrary[i].haveRead = true;
             };
+            displayLibrary();
         });
         removeButton = document.createElement("button");
         removeButton.innerHTML = "Remove book";

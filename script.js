@@ -28,7 +28,7 @@ function displayLibrary() {
         cardPage = document.createElement("p");
         cardPage.innerHTML = "Number of pages: " + myLibrary[i].pageNumber;
         card.appendChild(cardPage);
-        if (myLibrary[i].haveRead == true) {
+        if (myLibrary[i].haveRead == "yes") {
             cardRead = document.createElement("p");
             cardRead.innerHTML = "Read";
             card.appendChild(cardRead)

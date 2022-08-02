@@ -28,7 +28,7 @@ function displayLibrary() {
         cardPage = document.createElement("p");
         cardPage.innerHTML = "Number of pages: " + myLibrary[i].pageNumber;
         card.appendChild(cardPage);
-        if (myLibrary[i].haveRead == "yes") {
+        if (myLibrary[i].haveRead == true) {
             cardRead = document.createElement("p");
             cardRead.innerHTML = "Read";
             card.appendChild(cardRead)
@@ -52,7 +52,7 @@ formSubmit.addEventListener("click", () => {
     submittedBook.title = document.getElementById("titleInput").value;
     submittedBook.author = document.getElementById("authorInput").value;
     submittedBook.pageNumber = document.getElementById("pageInput").value;
-    submittedBook.haveRead = document.getElementById("readInput").value;
+    submittedBook.haveRead = document.getElementById("readInput").checked;
     myLibrary.push(submittedBook);
     displayLibrary();
 })

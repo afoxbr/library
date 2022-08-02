@@ -37,6 +37,23 @@ function displayLibrary() {
             cardRead.innerHTML = "Not Read";
             card.appendChild(cardRead)
         };
+        readButton = document.createElement("button");
+        readButton.innerHTML = "Change read status";
+        card.appendChild(readButton);
+        readButton.addEventListener("click", () => {
+            if (cardRead.innerHTML == "Read") {
+                cardRead.innerHTML = "Not Read";
+            } else if (cardRead.innerHTML == "Not Read") {
+                cardRead.innerHTML = "Read";
+            };
+        });
+        removeButton = document.createElement("button");
+        removeButton.innerHTML = "Remove book";
+        card.appendChild(removeButton);
+        removeButton.addEventListener("click", () => {
+            myLibrary.splice(i, 1)
+            displayLibrary();
+        });
     };
 };
 
@@ -55,4 +72,8 @@ formSubmit.addEventListener("click", () => {
     submittedBook.haveRead = document.getElementById("readInput").checked;
     myLibrary.push(submittedBook);
     displayLibrary();
-})
+    document.getElementById("titleInput").value = "";
+    document.getElementById("authorInput").value = "";
+    document.getElementById("pageInput").value = "";
+    document.getElementById("readInput").checked = false;
+});
